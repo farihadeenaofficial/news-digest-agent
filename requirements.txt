@@ -1,0 +1,6 @@
+feedparser
+newspaper3k
+lxml[html_clean]
+google-generativeai
+supabase
+pytz
