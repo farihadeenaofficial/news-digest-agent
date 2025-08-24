@@ -1,0 +1,13 @@
+name: Hourly News Digest Trigger
+
+on:
+  schedule:
+    # This runs at 15 minutes past every hour
+    - cron: '15 * * * *'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Vercel URL to trigger function
+        run: curl -X GET "news-digest-agent-ldcxli0wp-deenas-projects-0b3e649c.vercel.app/api/index"
